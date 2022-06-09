@@ -229,6 +229,7 @@ class Claim(Facade, X12LoopBridge):
         Rest assured I did not come to this decision lightly."""
         loopName = "2110"
         hcpcs_code = CompositeAccess("SVC", "HC", 1)
+        hcpcs_code_modifier = CompositeAccess("SVC", "HC", 2)
         charge = ElementAccess("SVC", 2, x12type=Money)
         payment = ElementAccess("SVC", 3, x12type=Money)
         quantity = ElementAccess("SVC", 5)
