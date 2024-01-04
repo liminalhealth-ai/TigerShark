@@ -228,6 +228,8 @@ class Claim(Facade, X12LoopBridge):
 
         Rest assured I did not come to this decision lightly."""
         loopName = "2110"
+        hcpcs_code = CompositeAccess("SVC", "HC", 1)
+        hcpcs_code_modifier = CompositeAccess("SVC", "HC", 2)
         _BILLING_CODE_TYPES = ('AD', 'ER', 'HC', 'HP', 'IV', 'N4', 'N6', 'NU', 'UI', 'WK')
         billing_code_type = CompositeAccess("SVC", _BILLING_CODE_TYPES, 0)
         billing_code = CompositeAccess("SVC", _BILLING_CODE_TYPES, 1)
