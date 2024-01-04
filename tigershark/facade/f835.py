@@ -337,8 +337,13 @@ class Claim(Facade, X12LoopBridge):
         payer_claim_control_number = ElementAccess("CLP", 7)
         facility_type = ElementAccess("CLP", 8)
         frequency_code = ElementAccess("CLP", 9)
+        
         diagnosis_related_group_weight = ElementAccess("CLP", 11)
         discharge_fraction = ElementAccess("CLP", 12)
+
+        drg_code = ElementAccess("CLP", 11)
+        drg_weight = ElementAccess("CLP", 12)
+
         # TODO: Medicare inpatient/outpatient adjudication?
 
         total_covered_charge = ElementAccess(
